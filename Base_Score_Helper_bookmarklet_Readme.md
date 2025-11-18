@@ -9,7 +9,7 @@
 
 ## Overview
 
-This bookmarklet enhances the Judge Click scoring interface by automatically detecting and summing the **top three left-side score inputs** in real time. It displays the live calculated **Base Score** in a draggable floating panel. It is optimized to be pasted into the **browser console**, supports toggle hotkeys, and does not require any extensions.
+This bookmarklet enhances the Judge Click scoring interface by automatically detecting and summing the **top three left-side score inputs** in real time. It displays the live calculated **Base Score** in a draggable floating panel. It is optimized to be to be run as a  **browser bookmarklet**, supports toggle hotkeys, and does not require any extensions.
 
 ---
 
