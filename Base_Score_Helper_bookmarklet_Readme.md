@@ -27,9 +27,10 @@ This bookmarklet enhances the Judge Click scoring interface by automatically det
 ## To Use
 
 1. Open Judge Click Tool
-2. Click you Bookmarklet (see instructions below)
+2. Click your Bookmark (see instructions below)
 
    Note: Bookmarklet tool will only activate with Judge Click - deactivated for other URLs (will warn with "Tool only runs on judge.click")
+
 
 ---
 
