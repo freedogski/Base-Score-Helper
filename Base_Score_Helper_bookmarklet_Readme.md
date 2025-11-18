@@ -3,7 +3,7 @@
 
 | **Summary** | **Base Score Example:** |
 |----------|----------|
-| Enhaced Judge Click by summing the 3 Turns Categories into Base Score     | ![Base Score UI](screenshots/BaseScore.png) |
+| Enhaces the Judge Click interfaces by summing the 3 Turns Categories into Base Score box    | ![Base Score UI](screenshots/BaseScore.png) |
 
 
 
