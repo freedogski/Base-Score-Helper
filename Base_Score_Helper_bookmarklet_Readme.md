@@ -1,4 +1,4 @@
-# BaseScore\_Helper\_Bookmarklet\_ReadMe
+# ReadMe\_BaseScore\_Helper\_Bookmarklet
 
 ## Overview
 
@@ -53,7 +53,11 @@ javascript:(function(){if(window._judgeBaseScore)return;window._judgeBaseScore=t
 
 ---
 
+## Disable the scripts
 
+Browser Refresh -->  Press F5
+
+---
 
 ## Code
 
