@@ -1,5 +1,19 @@
 # ReadMe\_BaseScore\_Helper\_Bookmarklet
 
+### Demo Screenshots / GIF
+
+Below are placeholders for screenshots or GIF demonstrations. Replace the links with your actual uploaded files:
+
+**Base Score Box Active (GIF Example):**  
+`![Base Score Box Demo](screenshots/base_score_demo.gif)`
+
+**Drag & Drop Debug Boxes Example:**  
+`![Debug Drag Demo](screenshots/debug_drag_demo.png)`
+
+**Input Fields Working Example:**  
+`![Input Fields Demo](screenshots/input_fields_demo.png)`
+
+
 ## Overview
 
 This bookmarklet enhances the Judge Click scoring interface by automatically detecting and summing the **top three left-side score inputs** in real time. It displays the live calculated **Base Score** in a draggable floating panel. It is optimized to be pasted into the **browser console**, supports toggle hotkeys, and does not require any extensions.
