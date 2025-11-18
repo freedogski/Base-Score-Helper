@@ -1,12 +1,10 @@
 # ReadMe\_BaseScore\_Helper\_Bookmarklet
 
-### Demo Screenshots / GIF
 
-**Base Score Box Active (GIF Example):**  
-`![Base Score Box Demo](screenshots/base_score_demo.gif)`
+| **Summary** | **Base Score Example:** |
+|----------|----------|
+| Enhaced Judge Click by summing the 3 Turns Categories into Base Score     | ![Base Score UI](screenshots/BaseScore.png) |
 
-**Base Score Box Example:**  
-`![Debug Drag Demo](screenshots/BaseScore.png)`
 
 
 ## Overview
