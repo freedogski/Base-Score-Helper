@@ -2,16 +2,11 @@
 
 ### Demo Screenshots / GIF
 
-Below are placeholders for screenshots or GIF demonstrations. Replace the links with your actual uploaded files:
-
 **Base Score Box Active (GIF Example):**  
 `![Base Score Box Demo](screenshots/base_score_demo.gif)`
 
-**Drag & Drop Debug Boxes Example:**  
-`![Debug Drag Demo](screenshots/debug_drag_demo.png)`
-
-**Input Fields Working Example:**  
-`![Input Fields Demo](screenshots/input_fields_demo.png)`
+**Base Score Box Example:**  
+`![Debug Drag Demo](screenshots/BaseScore.png)`
 
 
 ## Overview
