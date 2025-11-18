@@ -16,7 +16,7 @@ This script enhances the Judge Click scoring interface by automatically detectin
 ---
 
 ## How to Use
-### 🔹 Option 1: Paste into Browser Console (Recommended)
+### 🔹 Option 1: Paste into Browser Console (Not Recommended - unless troubleshooting enhancements)
 1. Open Google Chrome (or Edge, Firefox).
 2. Go to the Judge Click scoring page.
 3. Open **Developer Tools → Console** (`F12` or `Ctrl+Shift+I`).
@@ -25,14 +25,11 @@ This script enhances the Judge Click scoring interface by automatically detectin
 
 ---
 
-### 🔹 Option 2: Use as a Bookmarklet
+### 🔹 Option 2: Use as a Bookmarklet  (Recommended)
 You can convert this script into a one-line compressed bookmarklet.
-Ask ChatGPT for the latest version of the bookmarklet, then:
 
-1. Copy the one-line bookmarklet code.
-2. Create a new browser bookmark.
-3. Paste the code into the **URL** field.
-4. When on scoring page → click the bookmark to activate.
+See steps here:  https://github.com/freedogski/Base-Score-Helper/blob/main/Base_Score_Helper_bookmarklet_Readme.md
+
 
 ---
 
