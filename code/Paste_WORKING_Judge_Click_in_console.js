@@ -1,6 +1,6 @@
 (() => {
   // --- Global toggle flags ---
-  let debugEnabled = true;    // Controls visibility of red debug labels
+  let debugEnabled = false;    // Controls visibility of red debug labels, OFF by defauflt
   let scriptEnabled = true;   // Controls whether summing and panel are active
 
   // --- Helper: Extract numeric value from input or display element ---
@@ -189,3 +189,4 @@
   // --- Run immediately ---
   updateSum();
 })();
+
