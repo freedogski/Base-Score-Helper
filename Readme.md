@@ -9,7 +9,7 @@ This bookmarklet enhances the Judge Click scoring interface by automatically det
 
 | **Summary** | **Base Score Example:** |
 |----------|----------|
-| Enhaces the Judge Click interfaces by summing the three Turns Categories into a single  Base Score box    | ![Base Score UI](screenshots/BaseScore.png) |
+| Enhaces the Judge Click interfaces by summing the three Turns Categories into a single  Base Score box                                                               Short video clip here ![Base Score UI](screenshots/Base_score.gif)     | ![Base Score UI](screenshots/BaseScore.png) |
 
 ---
 
