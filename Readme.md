@@ -51,7 +51,7 @@ Browser Refresh -->  Press F5
    Supported in **Windows PC** (win11) and **macOS** (MacBook Pro and simliar)
    - Bookmarklets created in Chrome on Windows → syncs to Chrome on macOS → will work just fine
    
-   **Mobile devices** - No guarantee that this will work on Android phones, tablets or iPad**, iPhones as the smaller screens may inhibit proper operation
+   **Mobile devices** - No guarantee that this will work on Android phones, tablets or iPad**, iPhones as the smaller screens may inhibit proper operation.  Can confirm Android phones not supported.
 
 > ** One quirk to note with iPad (after limited testing) - Windows Chrome bookmark synced to iPad Chrome will **not** work due to differences in iPadOS
 
