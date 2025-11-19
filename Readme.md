@@ -63,6 +63,7 @@ Skip here - faster
 
 
 ---
+---
 
 ## Bookmarklet Instructions
 
@@ -73,6 +74,8 @@ The Instruction to create a bookmarklets:
 3. Name the bookmark (e.g., **Base Score Tool**).   or whatever you prefer
 4. In the URL/location field of the bookmark, paste the code exactly as it appears. (code below)
 5. While on the Judge Click scoring page, simply click the bookmark to activate the script.
+
+---
 
 ### Bookmarklet Code
 
@@ -87,7 +90,7 @@ javascript:(()=>{if(!location.href.startsWith('https://judge.click/')){alert("Th
 ```
 javascript:(()=>%7Bif(!location.href.startsWith('https://judge.click/'))%7Balert("This tool only runs on judge.click");return%7Dlet d=false,s=true;const g=e=>%7Bif(!e)return 0;if(e.tagName==="INPUT")return parseFloat(e.value)%7C%7C0;const t=e.querySelector("span, div");if(t)%7Bconst n=parseFloat(t.innerText.replace(/%5B%5E%5Cd.-%5D/g,""));if(!isNaN(n))return n%7Dreturn e.dataset?.value?parseFloat(e.dataset.value)%7C%7C0:0%7D,top3=()=>%5B...document.querySelectorAll("input")%5D.filter(e=>!e.readOnly&&!e.disabled&&e.getBoundingClientRect().left<200).map(e=>(%7Bel:e,top:e.getBoundingClientRect().top%7D)).sort((a,b)=>a.top-b.top).slice(0,3).map(x=>x.el);let p=document.getElementById("baseScorePanel");if(!p)%7Bp=document.createElement("div");p.id="baseScorePanel";Object.assign(p.style,%7Bposition:"fixed",bottom:"160px",left:"10px",width:"130px",padding:"6px",background:"%23ffffcc",border:"1px solid %23999",borderRadius:"6px",textAlign:"center",zIndex:9999,boxShadow:"2px 2px 8px rgba(0,0,0,0.3)",cursor:"move"%7D);document.body.appendChild(p);const e=document.createElement("div");e.innerText="Base Score";Object.assign(e.style,%7BfontSize:"18px",fontWeight:"600",color:"%23333",marginBottom:"6px",fontFamily:"Arial, sans-serif"%7D),p.appendChild(e);const t=document.createElement("input");t.id="sumBox",t.readOnly=!0,Object.assign(t.style,%7Bpadding:"8px 12px",fontSize:"20px",fontWeight:"bold",width:"100%25",textAlign:"center",borderRadius:"4px",border:"1px solid %23999"%7D),p.appendChild(t)%7D(()=>%7Blet o=0,l=0,f=!1,c=(x,y)=>%7Bf=!0,o=x-p.getBoundingClientRect().left,l=y-p.getBoundingClientRect().top%7D,m=(x,y)=>%7Bif(!f)return;p.style.left=%60$%7Bx-o%7Dpx%60,p.style.top=%60$%7By-l%7Dpx%60,p.style.bottom="auto"%7D;p.addEventListener("mousedown",e=>%7Bif(e.target.id==="sumBox")return;c(e.clientX,e.clientY),e.preventDefault()%7D),window.addEventListener("mousemove",e=>m(e.clientX,e.clientY)),window.addEventListener("mouseup",()=>%7Bf=!1%7D),p.addEventListener("touchstart",e=>%7Bif(e.target.id==="sumBox")return;const t=e.touches%5B0%5D;c(t.clientX,t.clientY),e.preventDefault()%7D,%7Bpassive:false%7D),window.addEventListener("touchmove",e=>%7Bconst t=e.touches%5B0%5D;m(t.clientX,t.clientY)%7D,%7Bpassive:false%7D),window.addEventListener("touchend",()=>%7Bf=!1%7D)%7D)();const l=(e,t)=>%7Bif(!d)return;let n=e._debugLabel;n%7C%7C(n=document.createElement("div"),Object.assign(n.style,%7Bposition:"absolute",background:"rgba(255,0,0,0.85)",color:"%23fff",fontSize:"11px",padding:"2px 5px",borderRadius:"3px",zIndex:99999,whiteSpace:"nowrap",pointerEvents:"none"%7D),e._debugLabel=n,document.body.appendChild(n));const a=e.getBoundingClientRect();n.style.left=%60$%7Ba.left+scrollX-2%7Dpx%60,n.style.top=%60$%7Ba.top+scrollY-a.height*.9%7Dpx%60,n.textContent=t,n.style.display="block"%7D;const u=()=>%7Bif(!s)return;const e=top3(),t=e.reduce((a,o)=>a+g(o),0),n=document.getElementById("sumBox");n&&(n.value=t.toFixed(1)),document.querySelectorAll(".sum-highlight").forEach(a=>%7Ba.style.outline="",a._debugLabel&&(a._debugLabel.style.display="none")%7D),e.forEach((a,o)=>%7Ba.classList.add("sum-highlight"),a.style.outline="2px solid red",d&&l(a,%60$%7Bo+1%7D: $%7Bg(a).toFixed(1)%7D%60)%7D)%7D;setInterval(u,200),document.addEventListener("keydown",e=>%7Be.key.toLowerCase()==="d"&&(d=!d,console.log("Debug labels:",d),u()),e.key.toLowerCase()==="s"&&(s=!s,console.log("Script active:",s),document.getElementById("baseScorePanel")&&(document.getElementById("baseScorePanel").style.display=s?"block":"none"),u())%7D),u()%7D)();
 ```
-
+---
 ---
 
 ## Hotkey Controls
