@@ -1,43 +1,31 @@
 (() => {
-  // --- Global toggle flags ---
-  let debugEnabled = false;    // Controls visibility of red debug labels, OFF by defauflt
-  let scriptEnabled = true;   // Controls whether summing and panel are active
+  let debugEnabled = false;   // Controls visibility of red debug labels, OFF by default
+  let scriptEnabled = true;  // Controls whether summing and panel are active and displayed, or not
 
-  // --- Helper: Extract numeric value from input or display element ---
+  // --- Helper: read number ---
   const getDisplayedNumber = (el) => {
     if (!el) return 0;
-
-    // If it's an input field, read its numeric value
     if (el.tagName === 'INPUT') return parseFloat(el.value) || 0;
-
-    // Some scores may be inside SPAN or DIV elements
     const child = el.querySelector('span, div');
     if (child) {
       const num = parseFloat(child.innerText.replace(/[^\d.-]/g, ''));
       if (!isNaN(num)) return num;
     }
-
-    // Some pages use data-value attributes
     if (el.dataset?.value) return parseFloat(el.dataset.value) || 0;
-
     return 0;
   };
 
-  // --- Detect top 3 user-entered inputs positioned visibly on left side ---
+  // --- Detect top 3 left inputs ---
   const getTopThreeInputs = () => {
     return [...document.querySelectorAll('input')]
-      .filter(inp =>
-        !inp.readOnly &&
-        !inp.disabled &&
-        inp.getBoundingClientRect().left < 200 // Only left-side fields
-      )
+      .filter(inp => !inp.readOnly && !inp.disabled && inp.getBoundingClientRect().left < 200)
       .map(inp => ({ el: inp, top: inp.getBoundingClientRect().top }))
-      .sort((a, b) => a.top - b.top)          // Top-most inputs first
-      .slice(0, 3)                            // Take only first 3
-      .map(x => x.el);                        // Return elements only
+      .sort((a, b) => a.top - b.top)
+      .slice(0, 3)
+      .map(x => x.el);
   };
 
-  // --- Create draggable Base Score panel (only once) ---
+  // --- Create or get Base Score panel ---
   let panel = document.getElementById('baseScorePanel');
   if (!panel) {
     panel = document.createElement('div');
@@ -58,7 +46,6 @@
     });
     document.body.appendChild(panel);
 
-    // Title text inside panel
     const baseLabel = document.createElement('div');
     baseLabel.innerText = 'Base Score';
     Object.assign(baseLabel.style, {
@@ -70,7 +57,6 @@
     });
     panel.appendChild(baseLabel);
 
-    // The sum display input box
     const sumBox = document.createElement('input');
     sumBox.id = 'sumBox';
     sumBox.readOnly = true;
@@ -86,12 +72,12 @@
     panel.appendChild(sumBox);
   }
 
-  // --- Make Base Score panel draggable ---
+  // --- Make panel draggable ---
   (() => {
     let offsetX = 0, offsetY = 0, isDragging = false;
 
     panel.addEventListener('mousedown', (e) => {
-      if (e.target.id === 'sumBox') return; // Prevent dragging by clicking in sum field
+      if (e.target.id === 'sumBox') return;
       isDragging = true;
       offsetX = e.clientX - panel.getBoundingClientRect().left;
       offsetY = e.clientY - panel.getBoundingClientRect().top;
@@ -110,10 +96,9 @@
     });
   })();
 
-  // --- Debug label: small red tags next to inputs ---
+  // --- Show debug label above element ---
   const ensureLabel = (el, text) => {
-    if (!debugEnabled) return; // Skip if debug mode is off
-
+    if (!debugEnabled) return;
     let label = el._debugLabel;
     if (!label) {
       label = document.createElement('div');
@@ -131,7 +116,6 @@
       el._debugLabel = label;
       document.body.appendChild(label);
     }
-
     const rect = el.getBoundingClientRect();
     label.style.left = `${rect.left + window.scrollX - 2}px`;
     label.style.top = `${rect.top + window.scrollY - rect.height * 0.9}px`;
@@ -139,24 +123,22 @@
     label.style.display = 'block';
   };
 
-  // --- Main function: calculates sum and updates display ---
+  // --- Main update (fast and reliable) ---
   const updateSum = () => {
     if (!scriptEnabled) return;
 
     const inputs = getTopThreeInputs();
     const sum = inputs.reduce((a, el) => a + getDisplayedNumber(el), 0);
 
-    // Update sum box
     const sumBox = document.getElementById('sumBox');
     if (sumBox) sumBox.value = sum.toFixed(1);
 
-    // Clear previous outlines and labels
+    // Remove highlights and hide old labels
     document.querySelectorAll('.sum-highlight').forEach(el => {
       el.style.outline = '';
       if (el._debugLabel) el._debugLabel.style.display = 'none';
     });
 
-    // Highlight and label the top 3 inputs
     inputs.forEach((el, idx) => {
       el.classList.add('sum-highlight');
       el.style.outline = '2px solid red';
@@ -166,10 +148,10 @@
     });
   };
 
-  // --- Update repeatedly for real-time scoring (light CPU load) ---
+  // --- Use lightweight interval — reliable for live scoring ---
   setInterval(updateSum, 200);
 
-  // --- Hotkey toggles: D = Debug labels, S = Entire script on/off ---
+  // --- Hotkeys ---
   document.addEventListener('keydown', (e) => {
     if (e.key.toLowerCase() === 'd') {
       debugEnabled = !debugEnabled;
@@ -178,14 +160,10 @@
     }
     if (e.key.toLowerCase() === 's') {
       scriptEnabled = !scriptEnabled;
-      console.log("Script Enabled:", scriptEnabled);
-      if (panel) {
-        panel.style.display = scriptEnabled ? "block" : "none";
-      }
+      console.log('Script active:', scriptEnabled);
       updateSum();
     }
   });
 
-  // --- Run immediately ---
   updateSum();
 })();
