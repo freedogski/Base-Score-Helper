@@ -75,10 +75,10 @@ Skip here - faster
 The Instruction to create a bookmarklets:
 
 1. Copy the full one-line compressed bookmarklet code below.
-2. Open your browser and create a new bookmark.
-3. Name the bookmark (e.g., **Base Score Tool**).   or whatever you prefer
-4. In the URL/location field of the bookmark, paste the code exactly as it appears. (code below)
-5. While on the Judge Click scoring page, simply click the bookmark to activate the script.
+2. Open your browser and create a new bookmark from any working website (you will edit bookmark in next steps)
+3. Edit the bookmark you created in step 2 and name the bookmark (e.g., **Base Score Tool**).   or whatever you prefer
+4. Still in the bookmark added in step 2, in the URL/location field of the bookmark, paste the code exactly as it appears. (code below)
+5. Now navigate to Judge Click, and simply click the bookmark you just updated in steps 3 and 4 to activate the script.
 
 ---
 
