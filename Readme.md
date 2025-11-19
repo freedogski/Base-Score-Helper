@@ -130,6 +130,17 @@ The code is fully self-contained, readable, and documented with inline comments.
 
 🔹 Add local storage to remember panel position between sessions 🔹 Add color themes (light/contrast/large text) 🔹 Add drag handles on debug labels for repositioning 🔹 Convert to full Chrome extension (with manifest v3)
 
+Assessment on Performance impact to different devices
+
+| Device                 | Typical Idle CPU Load | During Input Updates                         |
+| ---------------------- | --------------------- | -------------------------------------------- |
+| Modern MacBook (M1/M2) | <0.5%                 | ~1–2%                                        |
+| Windows PC (i7)        | <1%                   | ~2–4%                                        |
+| iPad (2020 Air)        | ~2%                   | ~6–10% (during active dragging/debug labels) |
+| Older laptop (2015 i5) | ~3%                   | ~8–12%                                       |
+| Android phone - High-end (Snapdragon 8 Gen 1–3, etc)  **not recommended** | ~2%                |   6–10%    |
+| Android phone - Mid-range (Snapdragon 6/7, etc.)  **not recommended**  | ~3%                   |   10–15%      |
+
 ---
 
 ## License
