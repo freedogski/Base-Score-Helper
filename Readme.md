@@ -46,9 +46,9 @@ Note: Bookmarklet tool will only activate with Judge Click
 
 ---
 
-## Bookmarklet Instructions to create
+## Bookmarklet Instructions
 
-To use this script as a bookmarklet:
+TInstruction to create a bookmarklet:
 
 1. Copy the full one-line compressed bookmarklet code below.
 2. Open your browser and create a new bookmark.
