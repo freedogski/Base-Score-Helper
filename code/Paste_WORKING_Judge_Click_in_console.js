@@ -86,29 +86,43 @@
     panel.appendChild(sumBox);
   }
 
-  // --- Make Base Score panel draggable ---
-  (() => {
-    let offsetX = 0, offsetY = 0, isDragging = false;
+// --- Make Base Score panel draggable (mouse + touch) ---
+(() => {
+  let offsetX = 0, offsetY = 0, isDragging = false;
 
-    panel.addEventListener('mousedown', (e) => {
-      if (e.target.id === 'sumBox') return; // Prevent dragging by clicking in sum field
-      isDragging = true;
-      offsetX = e.clientX - panel.getBoundingClientRect().left;
-      offsetY = e.clientY - panel.getBoundingClientRect().top;
-      e.preventDefault();
-    });
+  const startDrag = (e) => {
+    const evt = e.touches ? e.touches[0] : e; // Support touch or mouse
+    if (evt.target.id === 'sumBox') return;
+    isDragging = true;
+    offsetX = evt.clientX - panel.getBoundingClientRect().left;
+    offsetY = evt.clientY - panel.getBoundingClientRect().top;
+    e.preventDefault();
+  };
 
-    window.addEventListener('mousemove', (e) => {
-      if (!isDragging) return;
-      panel.style.left = `${e.clientX - offsetX}px`;
-      panel.style.top = `${e.clientY - offsetY}px`;
-      panel.style.bottom = 'auto';
-    });
+  const duringDrag = (e) => {
+    if (!isDragging) return;
+    const evt = e.touches ? e.touches[0] : e;
+    panel.style.left = `${evt.clientX - offsetX}px`;
+    panel.style.top = `${evt.clientY - offsetY}px`;
+    panel.style.bottom = 'auto';
+    e.preventDefault();
+  };
 
-    window.addEventListener('mouseup', () => {
-      isDragging = false;
-    });
-  })();
+  const stopDrag = () => {
+    isDragging = false;
+  };
+
+  // Mouse events
+  panel.addEventListener('mousedown', startDrag);
+  window.addEventListener('mousemove', duringDrag);
+  window.addEventListener('mouseup', stopDrag);
+
+  // Touch events (iPad/iPhone/Android)
+  panel.addEventListener('touchstart', startDrag, { passive: false });
+  window.addEventListener('touchmove', duringDrag, { passive: false });
+  window.addEventListener('touchend', stopDrag);
+})();
+
 
   // --- Debug label: small red tags next to inputs ---
   const ensureLabel = (el, text) => {
@@ -189,4 +203,5 @@
   // --- Run immediately ---
   updateSum();
 })();
+
 
