@@ -1,15 +1,15 @@
 # ReadMe\_BaseScore\_Helper\_Bookmarklet
 
-
-| **Summary** | **Base Score Example:** |
-|----------|----------|
-| Enhaces the Judge Click interfaces by summing the 3 Turns Categories into Base Score box    | ![Base Score UI](screenshots/BaseScore.png) |
-
-
-
+---
 ## Overview
 
 This bookmarklet enhances the Judge Click scoring interface by automatically detecting and summing the **top three left-side score inputs** in real time. It displays the live calculated **Base Score** in a draggable floating panel. It is optimized to be to be run as a  **browser bookmarklet**, supports toggle hotkeys, and does not require any extensions.
+
+---
+
+| **Summary** | **Base Score Example:** |
+|----------|----------|
+| Enhaces the Judge Click interfaces by summing the three Turns Categories into a single  Base Score box    | ![Base Score UI](screenshots/BaseScore.png) |
 
 ---
 
@@ -28,21 +28,26 @@ This bookmarklet enhances the Judge Click scoring interface by automatically det
 1. Open Judge Click Tool
 2. Click your Bookmark (see instructions below on how to creaate)
 
+---
+
 Note: Bookmarklet tool will only activate with Judge Click
-- they are deactivated for other Website/URLs (will warn with "Tool only runs on judge.click")
+- Bookmarklets are deactivated for other Websites/URLs (will warn with "Tool only runs on judge.click")
+
+---
 
 ## Supported devices
-   Supported in Windows PC (win11) and macOS (MacBook Pro and simliar)
+   Supported in **Windows PC** (win11) and **macOS** (MacBook Pro and simliar)
    - Bookmarklets created in Chrome on Windows → syncs to Chrome on macOS → will work just fine
    
-   Mobile devices - No gaurantee that this will work on Android phones, tablets or iPad, iPhones as the samller screens may inhibit proper operation
-   - One quirk to note with iPad (after limited testing) - Windows Chrome bookmark synced to iPad Chrome will **not** work due to differences in iPadOS
-   - To overcome this with iPad, always create bookmarklets in Safari first.
-     1. Even if you want them in Chrome on iPad
-     2. Create/Save the bookmarklet in Safari.
-     3. Edit the URL and paste your javascript: code.
-     4. Test it — it will work.
-     5. Copy that code into Chrome’s bookmark manually if needed.
+   **Mobile devices** - No guarantee that this will work on Android phones, tablets or iPad**, iPhones as the smaller screens may inhibit proper operation
+
+*- One quirk to note with iPad (after limited testing) - Windows Chrome bookmark synced to iPad Chrome will **not** work due to differences in iPadOS*
+*- To overcome this with iPad, always create bookmarklets in Safari first.*
+1. Even if you want them in Chrome on iPad
+2. Create/Save the bookmarklet in Safari.
+3. Edit the URL and paste your javascript: code.
+4. Test it — it will work.
+5. Copy that code into Chrome’s bookmark manually if needed.*
 
 ---
 
