@@ -1,4 +1,9 @@
 (() => {
+  if (!window.location.href.startsWith('https://judge.click/')) {
+    alert("This tool only runs on judge.click");
+    return;
+  }
+
   let debugEnabled = false;   // Controls visibility of red debug labels, OFF by default
   let scriptEnabled = true;  // Controls whether summing and panel are active and displayed, or not
 
