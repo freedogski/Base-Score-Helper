@@ -27,11 +27,17 @@ This bookmarklet enhances the Judge Click scoring interface by automatically det
 
 1. Open Judge Click Tool
 2. Click your Bookmark (see instructions below on how to creaate)
-
 ---
 
 Note: Bookmarklet tool will only activate with Judge Click
 - Bookmarklets are deactivated for other Websites/URLs (will warn with "Tool only runs on judge.click")
+
+---
+
+## To Disable
+
+Browser Refresh -->  Press F5
+
 
 ---
 
@@ -41,13 +47,14 @@ Note: Bookmarklet tool will only activate with Judge Click
    
    **Mobile devices** - No guarantee that this will work on Android phones, tablets or iPad**, iPhones as the smaller screens may inhibit proper operation
 
-*- One quirk to note with iPad (after limited testing) - Windows Chrome bookmark synced to iPad Chrome will **not** work due to differences in iPadOS*
-*- To overcome this with iPad, always create bookmarklets in Safari first.*
+** One quirk to note with iPad (after limited testing) - Windows Chrome bookmark synced to iPad Chrome will **not** work due to differences in iPadOS
+
+To overcome this with **iPad**, always create bookmarklets in Safari first.
 1. Even if you want them in Chrome on iPad
 2. Create/Save the bookmarklet in Safari.
-3. Edit the URL and paste your javascript: code.
+3. Edit the URL and paste your bookmarklet code.
 4. Test it — it will work.
-5. Copy that code into Chrome’s bookmark manually if needed.*
+5. Copy that code into Chrome’s bookmark manually - to use in Chrome iPad.
 
 ---
 
@@ -85,12 +92,6 @@ javascript:(function(){if(!/judge\.click/.test(location.href)){alert('This tool 
 | Panel Dragging    | Drag from the yellow background (not from the sum box) |
 | Debug Labels      | Display ranking & numeric value ribbon above inputs    |
 | Real-time Updates | 5 updates per second (200ms interval)                  |
-
----
-
-## Disable the scripts
-
-Browser Refresh -->  Press F5
 
 ---
 
