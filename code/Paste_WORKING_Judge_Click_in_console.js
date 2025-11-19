@@ -166,6 +166,9 @@
     if (e.key.toLowerCase() === 's') {
       scriptEnabled = !scriptEnabled;
       console.log('Script active:', scriptEnabled);
+      // Toggle Base Score panel visibility
+      const panel = document.getElementById('baseScorePanel');
+      if (panel) panel.style.display = scriptEnabled ? 'block' : 'none';
       updateSum();
     }
   });
