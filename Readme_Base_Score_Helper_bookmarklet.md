@@ -20,21 +20,33 @@ This bookmarklet enhances the Judge Click scoring interface by automatically det
 - 🔴 **Debug Mode (D key)** — Shows live input ranks and values directly on screen.
 - ⛔ **Script Toggle (S key)** — Hide/show the Base Score box and stop/start updates.
 - ⚡ **Very lightweight** — Updates every 200ms, minimal impact on performance.
-- 🧠 **No Tampermonkey needed** — Works via copy-paste into console.
 
 ---
 
 ## To Use
 
 1. Open Judge Click Tool
-2. Click your Bookmark (see instructions below)
+2. Click your Bookmark (see instructions below on how to creaate)
 
-   Note: Bookmarklet tool will only activate with Judge Click - deactivated for other URLs (will warn with "Tool only runs on judge.click")
+Note: Bookmarklet tool will only activate with Judge Click
+- they are deactivated for other Website/URLs (will warn with "Tool only runs on judge.click")
 
+## Supported devices
+   Supported in Windows PC (win11) and macOS (MacBook Pro and simliar)
+   - Bookmarklets created in Chrome on Windows → syncs to Chrome on macOS → will work just fine
+   
+   Mobile devices - No gaurantee that this will work on Android phones, tablets or iPad, iPhones as the samller screens may inhibit proper operation
+   - One quirk to note with iPad (after limited testing) - Windows Chrome bookmark synced to iPad Chrome will **not** work due to differences in iPadOS
+   - To overcome this with iPad, always create bookmarklets in Safari first.
+     1. Even if you want them in Chrome on iPad
+     2. Create/Save the bookmarklet in Safari.
+     3. Edit the URL and paste your javascript: code.
+     4. Test it — it will work.
+     5. Copy that code into Chrome’s bookmark manually if needed.
 
 ---
 
-## Bookmarklet Instructions
+## Bookmarklet Instructions to create
 
 To use this script as a bookmarklet:
 
@@ -99,13 +111,7 @@ MIT License — free to use, modify, share.
 
 ## Author
 
-Created with assistance from ChatGPT (OpenAI), optimized for real competition scoring workflows.
+Created by freedogski, optimized for real competition scoring workflows.
 
 ---
-
-### 💡 Need more features?
-
-To request improvements (like auto-national deductions, penalty detection, or clipboard data export), just open an issue or ask on ChatGPT! 🎯
-
-
 
