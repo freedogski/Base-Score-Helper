@@ -9,6 +9,7 @@ Launch Safari on your Mac.
 In the top-left menu bar, click:
 
 **Safari → Settings…**
+![Safari Settings](screenshots/safarisettings.png)
 
 *(In older macOS versions, this was **Preferences…**, but it’s in the same place.)*
 
