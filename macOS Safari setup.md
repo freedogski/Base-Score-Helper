@@ -28,7 +28,7 @@ The updated option that controls bookmarklet execution is:
 
 ✔ **Show features for web developers**
 
-Turn this ON.
+⚠️ **IMPORTANT:** Turn this ON.
 
 This enables:
 - The **Develop** menu  
