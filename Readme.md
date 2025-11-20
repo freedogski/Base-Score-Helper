@@ -51,7 +51,10 @@ Browser Refresh -->  Press F5
    - Bookmarklets created in Chrome on Windows → syncs to Chrome on macOS → will work just fine
 
 > Safari blocks JavaScript execution from bookmarklets unless user enables:
-> - Settings → Safari → Advanced → Allow JavaScript from Smart Search Field  - more instruction here https://github.com/freedogski/Base-Score-Helper/blob/main/macOS%20Safari%20setup.md 
+> - Settings → Safari → Advanced → Allow JavaScript from Smart Search Field  - check here [macOS Safari setup.md](https://github.com/freedogski/Base-Score-Helper/blob/main/macOS%20Safari%20setup.md)
+
+> 💡 **Tip** Chrome in macOS work should work directly without any of the Safari changes above
+
    
    **Mobile devices** - No guarantee that this will work on Android phones, tablets or iPad**, iPhones as the smaller screens may inhibit proper operation.  Can confirm Android phones not supported.
 
