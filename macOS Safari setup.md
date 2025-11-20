@@ -51,7 +51,7 @@ This confirms that developer features — including bookmarklet JS — are enabl
 
 ---
 ---
-## 7. Optional: Test that your bookmarklets are enabled
+## 7. Optional: 📝 Test that your bookmarklets are enabled
 
 **Here’s a super simple bookmarklet you can use to test if Safari is executing JavaScript:**
 
