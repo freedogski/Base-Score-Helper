@@ -48,3 +48,25 @@ You should now see:
 **Develop** in the Safari menu bar.
 
 This confirms that developer features — including bookmarklet JS — are enabled.
+
+---
+---
+## 7. Optional: Test that your bookmarklets are enabled
+
+**Here’s a super simple bookmarklet you can use to test if Safari is executing JavaScript:**
+
+1. Create a new bookmark in Safari.
+2. Edit the URL of the bookmark and replace it with this code:
+
+
+```
+
+javascript:(function(){alert('JavaScript is running!');})();
+
+```
+
+3. Save the bookmark.
+4. Tap/click the bookmark.
+
+---
+---
