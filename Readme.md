@@ -49,7 +49,11 @@ Browser Refresh -->  Press F5
 
 ## Supported devices
    Supported in **Windows PC** (win11) and **macOS** (MacBook Pro and simliar)
+   - Works just fine in Chrome (preferred with Judge.Click) but also works in Edge and Safari _(after enabling bookmarklet JavaScript permissions)_
    - Bookmarklets created in Chrome on Windows → syncs to Chrome on macOS → will work just fine
+
+> Safari blocks JavaScript execution from bookmarklets unless user enables:
+> - Settings → Safari → Advanced → Allow JavaScript from Smart Search Field
    
    **Mobile devices** - No guarantee that this will work on Android phones, tablets or iPad**, iPhones as the smaller screens may inhibit proper operation.  Can confirm Android phones not supported.
 
