@@ -63,6 +63,8 @@ The Instruction to create a bookmarklets:
 4. Still in the bookmark added in step 2, in the URL/location field of the bookmark, paste the code exactly as it appears. (code below)
 5. Now navigate to Judge Click, and simply click the bookmark you just updated in steps 3 and 4 to activate the script.
 
+ > 💡 **Tip**  check here [BaseScore setup instructions video](https://github.com/freedogski/Base-Score-Helper/blob/main/screenshots/BaseScore_setup_instructions.mp4)
+
 ---
 
 ### Bookmarklet Code
