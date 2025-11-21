@@ -9,10 +9,7 @@ This bookmarklet enhances the Judge Click scoring interface by automatically det
 
 | **Summary** | **Base Score Example:** |  **Short Video** | 
 |----------|----------|----------|
-| Enhaces the Judge Click interfaces by summing the three Turns Categories into a single  Base Score box.     _Suggested to only use when entering when Judge Click is in the mode where three Turns Categories are eanbled, as pictured on the right._   | ![Base Score UI](screenshots/BaseScore.png) | Watch a short demo here: <a href="screenshots/Base_Score.gif">   <img src="screenshots/Base_Score.gif" alt="Base Score" width="400"> </a>)  |
-
-
-
+| Enhaces the Judge Click interfaces by summing the three Turns Categories into a single  Base Score box.     _Suggested to use only when Judge Click is in the mode where three Turns Categories are eanbled, as pictured on the right._   | ![Base Score UI](screenshots/BaseScore.png) | Watch a short demo here: <a href="screenshots/Base_Score.gif">   <img src="screenshots/Base_Score.gif" alt="Base Score" width="400"> </a>)  |
 
 
 
@@ -46,7 +43,7 @@ Browser Refresh -->  Press F5
 ---
 
 ## Supported devices
-   Supported in **Windows PC** (win11) and **macOS** (MacBook Pro and simliar)
+   **Windows PC** (win11) and **macOS** (MacBook Pro and simliar)
    - Works just fine in PC with Chrome (preferred with Judge.Click) but also works in Edge, FireFox browswes
    - On Mac works with Chrome and Safari browsers. _(for Safari see below for enabling bookmarklet JavaScript permissions)_
 
@@ -70,15 +67,15 @@ The Instruction to create a bookmarklets:
 
 ### Bookmarklet Code
 
-Bookmarklet Code for **all devices**   _(except iPad - see below)_
+Bookmarklet Code for **PC and macOS**   _(except iPad - see below)_
 - For PC (verified with Chrome, Edge, FireFox)
 - Mac (verifed with Safari, should work with Chrome) 
 ```
 javascript:(()=>{if(!location.href.startsWith('https://judge.click/')){alert("This%20tool%20only%20runs%20on%20judge.click");return}let%20d=false,s=true;const%20g=e=>{if(!e)return%200;if(e.tagName==="INPUT")return%20parseFloat(e.value)||0;const%20t=e.querySelector("span,%20div");if(t){const%20n=parseFloat(t.innerText.replace(/[^\d.-]/g,""));if(!isNaN(n))return%20n}return%20e.dataset?.value?parseFloat(e.dataset.value)||0:0},top3=()=>[...document.querySelectorAll("input")].filter(e=>!e.readOnly&&!e.disabled&&e.getBoundingClientRect().left<200).map(e=>({el:e,top:e.getBoundingClientRect().top})).sort((a,b)=>a.top-b.top).slice(0,3).map(x=>x.el);let%20p=document.getElementById("baseScorePanel");if(!p){p=document.createElement("div");p.id="baseScorePanel";Object.assign(p.style,{position:"fixed",bottom:"160px",left:"10px",width:"130px",padding:"6px",background:"#ffffcc",border:"1px%20solid%20#999",borderRadius:"6px",textAlign:"center",zIndex:9999,boxShadow:"2px%202px%208px%20rgba(0,0,0,0.3)",cursor:"move"});document.body.appendChild(p);const%20e=document.createElement("div");e.innerText="Base%20Score";Object.assign(e.style,{fontSize:"18px",fontWeight:"600",color:"#333",marginBottom:"6px",fontFamily:"Arial,%20sans-serif"}),p.appendChild(e);const%20t=document.createElement("input");t.id="sumBox",t.readOnly=!0,Object.assign(t.style,{padding:"8px%2012px",fontSize:"20px",fontWeight:"bold",width:"100%",textAlign:"center",borderRadius:"4px",border:"1px%20solid%20#999"}),p.appendChild(t)}(()=>{let%20o=0,l=0,f=!1,c=(x,y)=>{f=!0,o=x-p.getBoundingClientRect().left,l=y-p.getBoundingClientRect().top},m=(x,y)=>{if(!f)return;p.style.left=`${x-o}px`,p.style.top=`${y-l}px`,p.style.bottom="auto"};p.addEventListener("mousedown",e=>{if(e.target.id==="sumBox")return;c(e.clientX,e.clientY),e.preventDefault()}),window.addEventListener("mousemove",e=>m(e.clientX,e.clientY)),window.addEventListener("mouseup",()=>{f=!1}),p.addEventListener("touchstart",e=>{if(e.target.id==="sumBox")return;const%20t=e.touches[0];c(t.clientX,t.clientY),e.preventDefault()},{passive:false}),window.addEventListener("touchmove",e=>{const%20t=e.touches[0];m(t.clientX,t.clientY)},{passive:false}),window.addEventListener("touchend",()=>{f=!1})})();const%20l=(e,t)=>{if(!d)return;let%20n=e._debugLabel;n||(n=document.createElement("div"),Object.assign(n.style,{position:"absolute",background:"rgba(255,0,0,0.85)",color:"#fff",fontSize:"11px",padding:"2px%205px",borderRadius:"3px",zIndex:99999,whiteSpace:"nowrap",pointerEvents:"none"}),e._debugLabel=n,document.body.appendChild(n));const%20a=e.getBoundingClientRect();n.style.left=`${a.left+scrollX-2}px`,n.style.top=`${a.top+scrollY-a.height*.9}px`,n.textContent=t,n.style.display="block"};const%20u=()=>{if(!s)return;const%20e=top3(),t=e.reduce((a,o)=>a+g(o),0),n=document.getElementById("sumBox");n&&(n.value=t.toFixed(1)),document.querySelectorAll(".sum-highlight").forEach(a=>{a.style.outline="",a._debugLabel&&(a._debugLabel.style.display="none")}),e.forEach((a,o)=>{a.classList.add("sum-highlight"),a.style.outline="2px%20solid%20red",d&&l(a,`${o+1}: ${g(a).toFixed(1)}`)})};setInterval(u,200),document.addEventListener("keydown",e=>{e.key.toLowerCase()==="d"&&(d=!d,console.log("Debug labels:",d),u()),e.key.toLowerCase()==="s"&&(s=!s,console.log("Script active:",s),document.getElementById("baseScorePanel")&&(document.getElementById("baseScorePanel").style.display=s?"block":"none"),u())}),u()})();
 ```
-> On macOS, then Safari blocks JavaScript execution from bookmarklets unless user enables:
+> On macOS, then Safari blocks JavaScript execution from bookmarklets.   
+> To enable bookmarklet JavaScript permissions in Safari:
 > - Settings → Safari → Advanced → Allow JavaScript from Smart Search Field
->   
 > - ⚠️ **Issues setting up in Safari?:** check here [macOS Safari setup.md](https://github.com/freedogski/Base-Score-Helper/blob/main/macOS%20Safari%20setup.md)
 
 > 💡 **Tip** Chrome in macOS work should work directly without any of the Safari changes above
