@@ -1,0 +1,12 @@
+{
+  "name": "basescore_helper",
+  "version": "1.0.0",
+  "description": "Helper utilities for base score calculations",
+  "type": "module",
+  "scripts": {
+    "start": "node src/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
