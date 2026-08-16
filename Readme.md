@@ -71,26 +71,23 @@ The Instruction to create a bookmarklets:
 
 ### Version 2.0 (right-side Judge Click score area)
 
-Use the shorter minified v2 bookmarklet one-liner from this file (recommended):
-- [code/bookmarklet_v2.0.min.txt](code/bookmarklet_v2.0.min.txt)
 
-If your browser ignores the encoded version, use this fallback instead:
-- [code/bookmarklet_v2.0.min.raw.txt](code/bookmarklet_v2.0.min.raw.txt)
+How to use v2 quickly 
+(recommended to use this shorter minified v2 bookmarklet one-liner from this file):
 
-How to use v2 quickly:
 1. Open [code/bookmarklet_v2.0.min.txt](code/bookmarklet_v2.0.min.txt)
 2. Copy the full single line.
 3. Paste it into your bookmark URL/location field.
 4. Run it on Judge Click.
 
 If v2 does not run:
+ (or if your browser ignores the encoded version, use this fallback instead)
+
 1. Delete the old v2 bookmark and create a brand-new bookmark.
 2. Confirm the URL starts with `javascript:` (exactly).
 3. Try [code/bookmarklet_v2.0.min.raw.txt](code/bookmarklet_v2.0.min.raw.txt) as fallback.
 
-v2 defaults:
-- Reads the 3 score inputs from the right-side score area first.
-- Opens Base Score in the lower-right corner by default.
+
 
 Supported platforms for v2.0:
 - PC: Chrome, Edge, Firefox
