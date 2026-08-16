@@ -92,16 +92,10 @@ v2 defaults:
 - Reads the 3 score inputs from the right-side score area first.
 - Opens Base Score in the lower-right corner by default.
 
-Bookmarklet Code for **PC, macOS, and iPad (v2.0)**
+Supported platforms for v2.0:
 - PC: Chrome, Edge, Firefox
 - macOS: Chrome or Safari
 - iPadOS: Safari first, then optionally copy to Chrome
-
-Use this file as the default bookmarklet code:
-- [code/bookmarklet_v2.0.min.txt](code/bookmarklet_v2.0.min.txt)
-
-If your browser ignores the encoded version, use:
-- [code/bookmarklet_v2.0.min.raw.txt](code/bookmarklet_v2.0.min.raw.txt)
 
 Safari setup note (macOS + iPad):
 - Settings > Safari > Advanced > Allow JavaScript from Smart Search Field
