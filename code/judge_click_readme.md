@@ -16,6 +16,16 @@ This script enhances the Judge Click scoring interface by automatically detectin
 ---
 
 ## How to Use
+### 🔹 Version 2.0 (Judge Click right-side score area)
+1. Use the script file: **Judge_Click_in_console_v2.0.js**.
+2. Open Judge Click and paste that file content into the browser console.
+3. Press Enter.
+
+What changed in v2.0:
+- Detects the 3 score values from the **right-side** score area first.
+- Keeps fallback behavior if right-side detection is unavailable.
+- Opens the Base Score panel in the **lower-right corner** by default.
+
 ### 🔹 Option 1: Paste into Browser Console (Not Recommended - unless troubleshooting enhancements)
 1. Open Google Chrome (or Edge, Firefox).
 2. Go to the Judge Click scoring page.
@@ -27,6 +37,17 @@ This script enhances the Judge Click scoring interface by automatically detectin
 
 ### 🔹 Option 2: Use as a Bookmarklet  (Recommended)
 You can convert this script into a one-line compressed bookmarklet.
+
+For the ready-made v2 bookmarklet one-liner, use this shorter minified file (recommended):
+- [code/bookmarklet_v2.0.min.txt](code/bookmarklet_v2.0.min.txt)
+
+Fallback (no-encoding variant):
+- [code/bookmarklet_v2.0.min.raw.txt](code/bookmarklet_v2.0.min.raw.txt)
+
+If the bookmarklet does not run:
+1. Remove the old bookmark and create a new one.
+2. Verify the bookmark URL begins with `javascript:`.
+3. Try the raw fallback file above.
 
 See steps here:  https://github.com/freedogski/Base-Score-Helper/blob/main/Base_Score_Helper_bookmarklet_Readme.md
 
@@ -44,7 +65,7 @@ See steps here:  https://github.com/freedogski/Base-Score-Helper/blob/main/Base_
 ## Script Behavior
 | Feature | Behavior |
 |---------|----------|
-| Score Detection | Picks the top 3 visible input fields on the left side |
+| Score Detection | Original script: left side. v2.0 script: right-side score area first (with fallback). |
 | Panel Dragging | Drag from the yellow background (not from the sum box) |
 | Debug Labels | Display ranking & numeric value ribbon above inputs |
 | Real-time Updates | 5 updates per second (200ms interval) |
