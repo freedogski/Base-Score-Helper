@@ -19,7 +19,6 @@ This bookmarklet detects and sums the **top three score inputs in the right-side
 
 - 🎯 **Auto-sum of Top 3 Inputs** — Detects the top three score fields in the right-side area, with a fallback if needed.
 - 📦 **Floating Base Score Panel** — Draggable, always on top, very light and readable.
-- 🔴 **Debug Mode (D key)** — Shows live input ranks and values directly on screen.
 - ⛔ **Script Toggle (S key)** — Hide/show the Base Score box and stop/start updates.
 - ⚡ **Very lightweight** — Updates every 200ms, minimal impact on performance.
 
@@ -44,11 +43,9 @@ Refresh the Judge Click page to stop the bookmarklet.
 1. Create a bookmark in your browser and name it **Base Score Tool**.
 2. Open [the minified bookmarklet](code/bookmarklet_v2.0.min.txt) and copy the entire line.
 3. Edit your bookmark and paste the copied text into its URL or location field. Confirm the URL starts with `javascript:`, then save the bookmark.
-4. Open the Judge Click scoring page with all three Turn categories visible and click **Base Score Tool**.
+4. Open the Judge Click scoring page with all three Turn categories visible and click **Base Score Tool** bookmark
 
 If the bookmarklet does not run, confirm its URL still starts with `javascript:` and that you are on the Judge Click scoring page with all three Turn categories visible. Reopen the bookmark editor and save it again if needed.
-
-For a visual walkthrough, see the [setup video](screenshots/BaseScore_setup_instructions.mp4).
 
 ---
 
