@@ -69,7 +69,7 @@ javascript:(() => {
 
     const rightSideInputs = allInputs.filter((inp) => {
       const rect = inp.getBoundingClientRect();
-      return rect.left > window.innerWidth * 0.5;
+      return rect.left > window.innerWidth * 0.3;
     });
 
     const rightColumn = pickColumnTopThree(rightSideInputs);

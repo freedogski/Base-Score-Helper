@@ -76,6 +76,10 @@ How to use v2 quickly
 (recommended to use this shorter minified v2 bookmarklet one-liner from this file):
 
 1. Open [code/bookmarklet_v2.0.min.txt](code/bookmarklet_v2.0.min.txt)
+
+```javascript
+
+```
 2. Copy the full single line.
 3. Paste it into your bookmark URL/location field.
 4. Run it on Judge Click.
