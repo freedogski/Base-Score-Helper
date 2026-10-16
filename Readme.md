@@ -9,7 +9,7 @@ This bookmarklet detects and sums the **top three score inputs in the right-side
 
 | **Summary** | **Base Score Example** | **Short Video** |
 |----------|----------|----------|
-| Adds the scores from the three right-side Turn categories and displays their total in a Base Score panel. Use it when all three categories are visible. | ![Base Score UI](screenshots/BaseScore.png) | [Watch the short demo](screenshots/Base_Score.gif) |
+| Adds the scores from the three right-side Turn categories and displays their total in a Base Score panel. Use it when all three categories are visible. | ![Base Score UI](screenshots/BaseScore.png) | [Watch the short demo](screenshots/Base_Score.gif) This is with old version of Judge Click but still works same way.|
 
 
 
