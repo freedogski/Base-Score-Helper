@@ -14,7 +14,7 @@ Safari may require web developer features to be enabled before bookmarklets can 
 
 Safari adds the **Develop** menu. You can now try your bookmarklet on the Judge Click scoring page.
 
-## Optional: Test bookmarklets
+## Optional: Test if bookmarklets are enabled
 
 1. Create a new bookmark in Safari.
 2. Edit its URL and replace it with this single line:
@@ -24,4 +24,4 @@ Safari adds the **Develop** menu. You can now try your bookmarklet on the Judge 
 	```
 
 3. Save the bookmark, open any webpage, and click the test bookmark.
-4. If an alert appears, Safari ran the bookmarklet. You can delete the test bookmark afterward.
+4. If an alert appears, Safari ran the bookmarklet successfully. You can delete the test bookmark afterward.

@@ -51,7 +51,9 @@ If the bookmarklet does not run, confirm its URL still starts with `javascript:`
 
 ### Safari Setup
 
-On macOS, Safari may require web developer features to be enabled. Follow the [macOS Safari setup instructions](macOS%20Safari%20setup.md) if needed.
+On macOS, then you need to follow the instructions above for installing the Bookmarklet.
+
+NOTE: Safari may require web developer features to be enabled. Follow the [macOS Safari setup instructions](macOS%20Safari%20setup.md) if needed.
 
 
 ---
