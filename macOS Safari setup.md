@@ -1,72 +1,27 @@
-# ✅ macOS Safari — How to Allow JavaScript From the Smart Search Field
+# Enable Bookmarklets in Safari on macOS
 
-## 1. Open Safari
-Launch Safari on your Mac.
+Safari may require web developer features to be enabled before bookmarklets can run.
 
----
+![Safari Settings menu](screenshots/safari_settings.png)
 
-## 2. Open Safari Settings
-In the top-left menu bar, click:
+## Enable the setting
 
-**Safari → Settings…**
-![Safari Settings](screenshots/safari_settings.png)
+1. Open Safari.
+2. In the menu bar, choose **Safari > Settings...**. In older macOS versions, this menu item is called **Preferences...**.
 
-*(In older macOS versions, this was **Preferences…**, but it’s in the same place.)*
+3. Select the **Advanced** tab.
+4. Turn on **Show features for web developers**.
 
----
+Safari adds the **Develop** menu. You can now try your bookmarklet on the Judge Click scoring page.
 
-## 3. Go to the **Advanced** tab
-At the top of the Settings window, click:
-
-**Advanced**
-
----
-
-## 4. Enable: **“Show features for web developers”**
-Safari no longer uses the old “Allow JavaScript from Smart Search Field” label.  
-The updated option that controls bookmarklet execution is:
-
-✔ **Show features for web developers**
-
-⚠️ **IMPORTANT:** Turn this ON.
-
-This enables:
-- The **Develop** menu  
-- **Bookmarklet JavaScript execution**  
-- Console and debugging tools  
-
----
-
-## 5. (Automatically enabled)
-Once the checkbox is ON, Safari will allow JavaScript from bookmarklets.
-
----
-
-## 6. Optional: Confirm the **Develop** Menu is visible
-You should now see:
-
-**Develop** in the Safari menu bar.
-
-This confirms that developer features — including bookmarklet JS — are enabled.
-
----
----
-## 7. Optional: 📝 Test that your bookmarklets are enabled
-
-**Here’s a super simple bookmarklet you can use to test if Safari is executing JavaScript:**
+## Optional: Test bookmarklets
 
 1. Create a new bookmark in Safari.
-2. Edit the URL of the bookmark and replace it with this code:
+2. Edit its URL and replace it with this single line:
 
+	```text
+	javascript:(function(){alert('JavaScript is running!');})();
+	```
 
-```
-
-javascript:(function(){alert('JavaScript is running!');})();
-
-```
-
-3. Save the bookmark.
-4. Tap/click the bookmark.
-
----
----
+3. Save the bookmark, open any webpage, and click the test bookmark.
+4. If an alert appears, Safari ran the bookmarklet. You can delete the test bookmark afterward.

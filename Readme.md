@@ -1,15 +1,15 @@
-# ReadMe\_BaseScore\_Helper\_Bookmarklet
+# Base Score Helper for Judge Click
 
 ---
 ## Overview
 
-This bookmarklet enhances the Judge Click scoring interface by automatically detecting and summing the **top three score inputs from the right-side score area** in real time. It displays the live calculated **Base Score** in a draggable floating panel. It is optimized to be to be run as a **browser bookmarklet**, supports toggle hotkeys, and does not require any extensions.
+This bookmarklet detects and sums the **top three score inputs in the right-side score area** of Judge Click. It displays the calculated **Base Score** in a draggable panel and runs from a browser bookmark without requiring an extension.
 
 ---
 
-| **Summary** | **Base Score Example:** |  **Short Video** | 
+| **Summary** | **Base Score Example** | **Short Video** |
 |----------|----------|----------|
-| Enhaces the Judge Click interfaces by summing the three Turns Categories into a single  Base Score box.     _Suggested to use only when Judge Click is in the mode where three Turns Categories are eanbled, as pictured on the right._   | ![Base Score UI](screenshots/BaseScore.png) | Watch a short demo here: <a href="screenshots/Base_Score.gif">   <img src="screenshots/Base_Score.gif" alt="Base Score" width="400"> </a>)  |
+| Adds the scores from the three right-side Turn categories and displays their total in a Base Score panel. Use it when all three categories are visible. | ![Base Score UI](screenshots/BaseScore.png) | [Watch the short demo](screenshots/Base_Score.gif) |
 
 
 
@@ -17,7 +17,7 @@ This bookmarklet enhances the Judge Click scoring interface by automatically det
 
 ## Key Features
 
-- 🎯 **Auto Sum of Top 3 Inputs** — Always detects the top three editable score fields.
+- 🎯 **Auto-sum of Top 3 Inputs** — Detects the top three score fields in the right-side area, with a fallback if needed.
 - 📦 **Floating Base Score Panel** — Draggable, always on top, very light and readable.
 - 🔴 **Debug Mode (D key)** — Shows live input ranks and values directly on screen.
 - ⛔ **Script Toggle (S key)** — Hide/show the Base Score box and stop/start updates.
@@ -27,87 +27,45 @@ This bookmarklet enhances the Judge Click scoring interface by automatically det
 
 ## To Use
 
-1. Open Judge Click Tool
-2. Click the Bookmark you saved (_see instructions below on how to create_)
-
-> Note: Bookmarklet tool will only activate with Judge Click
-> - Bookmarklets are deactivated for other Websites/URLs (will warn with "Tool only runs on judge.click")
+Open the Judge Click scoring page with all three Turn categories visible, then click your saved **Base Score Tool** bookmark. The bookmarklet only runs on `judge.click`.
 
 ---
 
 
 ## To Disable
 
-Browser Refresh -->  Press F5
-
----
-
-## Supported devices
-   **Windows PC** (win11) and **macOS** (MacBook Pro and simliar)
-   - Works just fine in PC with Chrome (preferred with Judge.Click) but also works in Edge, FireFox browswes
-   - On Mac works with Chrome and Safari browsers. _(for Safari see below for enabling bookmarklet JavaScript permissions)_
-
-     
-   **Mobile devices** - No guarantee that this will work on Android phones, iPhones as the smaller screens may inhibit proper operation.  Can confirm Android phones not supported.
-
----
----
-
-## Bookmarklet Instructions
-
-The Instruction to create a bookmarklets:
-
-1. Copy the full one-line compressed bookmarklet code below.
-2. Open your browser and create a new bookmark from any working website (you will edit bookmark in next steps)
-3. Edit the bookmark you created in step 2 and name the bookmark (e.g., **Base Score Tool**).   or whatever you prefer
-4. Still in the bookmark added in step 2, in the URL/location field of the bookmark, paste the code exactly as it appears. (code below)
-5. Now navigate to Judge Click, and simply click the bookmark you just updated in steps 3 and 4 to activate the script.
-
- > 💡 **Tip**  check here [BaseScore setup instructions video](https://github.com/freedogski/Base-Score-Helper/blob/main/screenshots/BaseScore_setup_instructions.mp4)
-
----
-
-### Bookmarklet Code
-
-### Version 2.0 (right-side Judge Click score area)
-
-
-How to use v2 quickly 
-(recommended to use this shorter minified v2 bookmarklet one-liner from this file):
-
-1. Open [code/bookmarklet_v2.0.min.txt](code/bookmarklet_v2.0.min.txt)
-
-```javascript
-
-```
-2. Copy the full single line.
-3. Paste it into your bookmark URL/location field.
-4. Run it on Judge Click.
-
-If v2 does not run:
- (or if your browser ignores the encoded version, use this fallback instead)
-
-1. Delete the old v2 bookmark and create a brand-new bookmark.
-2. Confirm the URL starts with `javascript:` (exactly).
-3. Try [code/bookmarklet_v2.0.min.raw.txt](code/bookmarklet_v2.0.min.raw.txt) as fallback.
-
-
-
-Supported platforms for v2.0:
-- PC: Chrome, Edge, Firefox
-- macOS: Chrome or Safari
-- iPadOS: Safari first, then optionally copy to Chrome
-
-Safari setup note (macOS + iPad):
-- Settings > Safari > Advanced > Allow JavaScript from Smart Search Field
-- If needed, see [macOS Safari setup.md](macOS%20Safari%20setup.md)
-
-iPad setup note:
-- Create the bookmark directly in Safari on iPad first.
-- If you use Chrome on iPad, manually copy the working Safari bookmark URL into a Chrome bookmark.
+Refresh the Judge Click page to stop the bookmarklet.
 
 
 ---
+
+## Install the Bookmarklet
+
+1. Create a bookmark in your browser and name it **Base Score Tool**.
+2. Open [the minified bookmarklet](code/bookmarklet_v2.0.min.txt) and copy the entire line.
+3. Edit your bookmark and paste the copied text into its URL or location field. Confirm the URL starts with `javascript:`, then save the bookmark.
+4. Open the Judge Click scoring page with all three Turn categories visible and click **Base Score Tool**.
+
+If the bookmarklet does not run, confirm its URL still starts with `javascript:` and that you are on the Judge Click scoring page with all three Turn categories visible. Reopen the bookmark editor and save it again if needed.
+
+For a visual walkthrough, see the [setup video](screenshots/BaseScore_setup_instructions.mp4).
+
+---
+
+### Safari Setup
+
+On macOS, Safari may require web developer features to be enabled. Follow the [macOS Safari setup instructions](macOS%20Safari%20setup.md) if needed.
+
+
+---
+
+## Supported Devices
+
+- **Windows 11:** Chrome, Edge, and Firefox.
+- **macOS:** Chrome and Safari. Safari requires the setting described below.
+- **iPadOS:** Safari. To use Chrome, first create the bookmark in Safari, then copy its URL into Chrome.
+- **Android:** Not supported. iPhone support is unverified, and the small screen may limit use.
+
 ---
 
 ## Hotkey Controls
@@ -132,26 +90,16 @@ iPad setup note:
 
 ## Code
 
-The code is fully self-contained, readable, and documented with inline comments.
-
-*(See main repository file for complete source code.)*
+The bookmarklet is self-contained. For the readable source, see [Judge_Click_in_console_v2.0.js](code/Judge_Click_in_console_v2.0.js).
 
 ---
 
 ## Enhancements Roadmap
 
-🔹 Add local storage to remember panel position between sessions 🔹 Add color themes (light/contrast/large text) 🔹 Add drag handles on debug labels for repositioning 🔹 Convert to full Chrome extension (with manifest v3)
-
-Assessment on Performance impact to different devices
-
-| Device                 | Typical Idle CPU Load | During Input Updates                         |
-| ---------------------- | --------------------- | -------------------------------------------- |
-| Modern MacBook (M1/M2) | <0.5%                 | ~1–2%                                        |
-| Windows PC (i7)        | <1%                   | ~2–4%                                        |
-| iPad (2020 Air)        | ~2%                   | ~6–10% (during active dragging/debug labels) |
-| Older laptop (2015 i5) | ~3%                   | ~8–12%                                       |
-| Android phone - High-end (Snapdragon 8 Gen 1–3, etc)  **not recommended** | ~2%                |   6–10%    |
-| Android phone - Mid-range (Snapdragon 6/7, etc.)  **not recommended**  | ~3%                   |   10–15%      |
+- Remember the panel position between sessions.
+- Add color themes and larger text options.
+- Add drag handles to debug labels.
+- Explore a Chrome extension with Manifest V3.
 
 ---
 
